@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .resize-drag {
+        width: 120px;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 1rem;
+        background-color: #29e;
+        color: white;
+        font-size: 20px;
+        font-family: sans-serif;
+
+        touch-action: none;
+
+        /* This makes things *much* easier */
+        box-sizing: border-box;
+      }
+    </style>
+      <style>
+.draggable {
+  width: 25%;
+  min-height: 6.5em;
+  margin: 1rem 0 0 1rem;
+  background-color: #29e;
+  color: white;
+  border-radius: 0.75em;
+  padding: 4%;
+  touch-action: none;
+  user-select: none;
+}
+  </style>
+
+  <!-- ✅ 載入 Interact.js -->
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+  <style>
+    .slider {
+      position: relative;
+      width: 300px;
+      height: 1em;
+      margin: 2em;
+      border-radius: 0.5em;
+    }
+
+    .red {
+      background: red;
+    }
+
+    .green {
+      background: green;
+    }
+
+    .blue {
+      background: blue;
+    }
+
+    /* 手把 */
+    .handle {
+      position: absolute;
+      top: -0.5em;
+      width: 2em;
+      height: 2em;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      background: inherit;
+      cursor: pointer;
+    }
+
+    /* 顯示數值 */
+    .value {
+      position: absolute;
+      top: -1.8em;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+    }
+  </style>
+
+  <!-- ✅ 載入 Interact.js -->
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      interact('.handle').draggable({
+        listeners: {
+          move(event) {
+            const handle = event.target
+            const slider = handle.parentElement
+            const rect = slider.getBoundingClientRect()
+
+            // 計算相對位置
+            let x = event.pageX - rect.left
+            if (x < 0) x = 0
+            if (x > rect.width) x = rect.width
+
+            // 移動手把
+            handle.style.left = (x - handle.offsetWidth / 2) + "px"
+
+            // 算出數值 0~1
+            let value = x / rect.width
+            slider.querySelector('.value').textContent = value.toFixed(2)
+          }
+        }
+      })
+    })
+  </script>
+  <script>
+const position = { x: 0, y: 0 }
+
+interact('.draggable').draggable({
+  listeners: {
+    start (event) {
+      console.log(event.type, event.target)
+    },
+    move (event) {
+      position.x += event.dx
+      position.y += event.dy
+
+      event.target.style.transform =
+        `translate(${position.x}px, ${position.y}px)`
+    },
+  }
+})
+  </script>
+</head>
+
+<body>
+<div class="draggable"> Draggable Element </div>
+  <div class="slider red">
+    <div class="handle"></div>
+    <div class="value">0.00</div>
+  </div>
+  <div class="slider green">
+    <div class="handle"></div>
+    <div class="value">0.00</div>
+  </div>
+  <div class="slider blue">
+    <div class="handle"></div>
+    <div class="value">0.00</div>
+  </div>
+</body>
+</html>

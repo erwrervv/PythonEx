@@ -1,0 +1,16 @@
+
+.header {
+    background-image: url(./banner.jpg);
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+}
+p{
+    width: 350px;
+padding-left: 800px;
+}
+h1 {
+padding-top: 90px;
+    padding-left: 800px;
+    width: 400px;
+}

@@ -1,0 +1,87 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #E3E1C6;
+}
+
+p {
+	/* padding: 20px; */
+	width: calc(100%/6);
+}
+
+.container {
+	width: calc(100%/1.5);
+
+	background-color: #FFF;
+	margin: 0 auto;
+}
+
+.header {
+	border-top: #066 20px solid;
+	border-bottom: #066 20px solid;
+}
+
+.header img {
+	vertical-align: bottom;
+}
+
+.box {
+	/* height: 1000px; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	/* padding: 20px; */
+	box-sizing: border-box;
+
+}
+
+.box .b1 {
+	/* padding: 20px; */
+	margin: 0 20px;
+	display: flex;
+	justify-content: center;
+	/* padding: 20px; */
+	box-sizing: border-box;
+	align-self: flex-end;
+	background: #c5bbbb;
+}
+
+.box .b1 p {
+	/* padding: 20px; */
+	margin: 20px 20px;
+}
+
+.box .b2 {
+	/* padding: 20px; */
+	margin: 20px 20px;
+	display: flex;
+	/* justify-content: space-between; */
+	/* padding: 20px; */
+
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	background: #d5e6bf;
+	padding: 10px;
+	box-sizing: border-box;
+
+}
+
+.box .b2 p {
+	margin: 10px;
+	background-color: #FFF ;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.box .b3 {
+	/* padding: 20px; */
+	margin: 0 20px;
+	display: flex;
+	justify-content: flex-end;
+	/* padding: 20px; */
+	box-sizing: border-box;
+	background: #b2d0ec;
+}

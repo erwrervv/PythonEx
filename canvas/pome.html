@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+  <style>
+    .wrapper {
+      height: 300px;
+      background: pink;
+    }
+    .col-6 img {
+      width: 140px;
+    }
+  </style>
+  <script>
+    var pokemons = [];
+    interact(".dropzone").dropzone({
+      // only accept elements matching this CSS selector
+      accept: ".drag",
+      // Require a 75% element overlap for a drop to be possible
+      overlap: 0.75,
+
+      // listen for drop related events:
+
+      ondropactivate: function (event) {
+        // add active dropzone feedback
+        event.target.classList.add("drop-active");
+      },
+      ondragenter: function (event) {},
+      ondragleave: function (event) {
+        // remove the drop feedback style
+        var draggableID = event.relatedTarget.dataset.id;
+        // $("#show").text("drop");
+        // console.log("leave: "+draggableID)
+        var index = pokemons.indexOf(draggableID);
+        if (index > -1) {
+          pokemons.splice(index, 1);
+        }
+        console.log(pokemons);
+        $("#show").text(pokemons.toString());
+      },
+      ondrop: function (event) {
+        var draggableID = event.relatedTarget.dataset.id;
+        // $("#show").text("drop");
+        if (!pokemons.includes(draggableID)) {
+          pokemons.push(draggableID);
+        }
+
+        $("#show").text(pokemons.toString());
+      },
+      ondropdeactivate: function (event) {
+        // remove active dropzone feedback
+      },
+    });
+
+    interact(".drag").draggable({
+      // enable inertial throwing
+      inertia: true,
+      // enable autoScroll
+      autoScroll: true,
+
+      // call this function on every dragmove event
+      onmove: dragMoveListener,
+      // call this function on every dragend event
+      onend: function (event) {
+        var textEl = event.target.querySelector("p");
+
+        textEl &&
+          (textEl.textContent =
+            "moved a distance of " +
+            Math.sqrt(
+              (Math.pow(event.pageX - event.x0, 2) +
+                Math.pow(event.pageY - event.y0, 2)) |
+                0
+            ).toFixed(2) +
+            "px");
+      },
+    });
+
+    function dragMoveListener(event) {
+      var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
+
+      // translate the element
+      target.style.webkitTransform = target.style.transform =
+        "translate(" + x + "px, " + y + "px)";
+
+      // update the posiion attributes
+      target.setAttribute("data-x", x);
+      target.setAttribute("data-y", y);
+    }
+
+    // this is used later in the resizing and gesture demos
+    window.dragMoveListener = dragMoveListener;
+  </script>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="wrapper dropzone">
+            <span id="show"></span>
+          </div>
+        </div>
+        <div class="col-6">
+          <img
+            class="drag"
+            src="https://pokemon.wingzero.tw/assets/pokemon/386.png"
+            data-id="386"
+            alt=""
+          />
+          <img
+            class="drag"
+            src="https://pokemon.wingzero.tw/assets/pokemon/400.png"
+            data-id="400"
+            alt=""
+          />
+          <img
+            class="drag"
+            src="https://pokemon.wingzero.tw/assets/pokemon/807.png"
+            data-id="807"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

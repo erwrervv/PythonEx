@@ -1,0 +1,20 @@
+body{
+    background-color: #f8c5c5;
+    /* background-image:repeating-linear-gradient(30deg,red 0px , white 20px) ; */
+    /* background-repeat:repeat ; */
+}
+div{
+    
+}
+.box {
+    padding: 20px;
+    width: 1200px;
+    text-align: justify;
+    background-color: rgb(247, 70, 99);
+    margin:0 auto ;
+    /* padding: 20px; */
+}
+
+h1 {}
+
+p {}

@@ -1,0 +1,21 @@
+body {
+    background-image: url(./1920x1200.jpg);
+    background-size: cover;
+
+}
+.box{
+    background-image: url(./bg06.png), url(./bg07.png), url(./bg08.png);
+    background-repeat: repeat-x, no-repeat, no-repeat;
+    background-position: left top,right top ,left bottom;
+}
+div{
+
+    width: 1200px;
+    background-color: #fff;
+    margin: 0 auto ;
+    background-color: #ffc3c3;
+    box-sizing: border-box;
+}
+p {
+
+}

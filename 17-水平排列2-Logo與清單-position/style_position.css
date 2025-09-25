@@ -1,0 +1,101 @@
+
+.header {
+    width: 1000px;
+    background-image: url(./banner.png);
+    background-size: cover;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    height: 150px;
+    position: relative;
+}
+h1 {
+    width: 200px;
+    position: absolute;
+    top:-10px;
+    left: 20px;
+}
+
+ul {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+li {
+    list-style-type: none;
+    float: right;
+    margin-right: 10px;
+    background-image: url(./icon4_1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+}
+
+li a {
+    display: block;
+font-size: 20px;
+    /* background-color: #690; */
+    text-align: center;
+    color: #fc48e4;
+    text-decoration: none;
+    padding-top: 90px;
+}
+
+li a:hover {
+    /* background-color: #06C; */
+    color: #FF6;
+}
+
+/* 預設圖 */
+.icon1 {
+    background-image: url('./icon1_1.png');
+}
+
+.icon2 {
+    background-image: url('./icon2_1.png');
+}
+
+.icon3 {
+    background-image: url('./icon3_1.png');
+}
+
+.icon4 {
+    background-image: url('./icon4_1.png');
+}
+
+.icon5 {
+    background-image: url('./icon5_1.png');
+}
+
+/* hover 圖 */
+.icon1:hover {
+    background-image: url('./icon1_2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.icon2:hover {
+    background-image: url('./icon2_2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.icon3:hover {
+    background-image: url('./icon3_2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.icon4:hover {
+    background-image: url('./icon4_2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.icon5:hover {
+    background-image: url('./icon5_2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}

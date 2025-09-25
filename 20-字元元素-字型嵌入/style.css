@@ -1,0 +1,79 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #CCC;
+}
+
+span.material-symbols-outlined {
+	font-size: 60px;
+	color:red;
+}
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+	margin: 10px;
+}
+
+h2 {
+	/* font-size: 60px; */
+	text-align: center;
+	margin: 10px;
+	font-size: 50px;
+	font-family: "Bitcount Grid Single Ink", system-ui;
+	font-optical-sizing: auto;
+	font-weight: weight;
+	font-style: normal;
+	font-variation-settings:
+		"slnt" 0,
+		"CRSV" 0.5,
+		"ELSH" 0,
+		"ELXP" 0,
+		"SZP1" 0,
+		"SZP2" 0,
+		"XPN1" 0,
+		"XPN2" 0,
+		"YPN1" 0,
+		"YPN2" 0;
+
+}
+
+.container {
+	background-color: #FFF;
+	width: 1200px;
+	margin: 20px auto;
+	padding: 20px;
+	display: flex;
+	justify-content: space-around;
+	font-size: 20px;
+}
+
+.box {
+	width: 30%;
+	padding: 20px;
+	box-sizing: border-box;
+	border: #333 3px solid;
+	border-radius: 20px;
+}
+
+/*==============================*/
+.box1 {
+	background-color: #F90;
+}
+
+/*==============================*/
+.box2 {
+	background-color: #9C0;
+}
+
+/*==============================*/
+.box3 {
+	background-color: #09F;
+}
+
+
+
+/*======字型嵌入======*/

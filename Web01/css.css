@@ -1,0 +1,36 @@
+body{
+    background-color: #c8cac7;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(23, 23, 189);
+    font-weight: normal;
+
+}
+h2 {
+    background-color: #95ebfa;
+    color: blue;
+    font-weight: normal;
+}
+p{
+    color: rgb(252, 161, 181);
+    text-shadow:
+            /* 6px #e72828;
+             -2px -2px 0 #e72828,
+            2px -2px 0 #e72828,
+            -2px 2px 0 #e72828,  */
+             1px 1px 0 #e72828,
+            0px 0px 1px #e72828;
+
+    font-size: 24px;
+}
+.cred{
+    color: red;
+}
+.pm5{
+padding-bottom: 2px;
+}
+.fz16{
+    font-size: 16px;
+}

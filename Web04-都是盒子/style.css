@@ -1,0 +1,26 @@
+body{
+background-color: #fcc9f7;
+
+}
+h1{
+    background-color: #e7ffa6;
+    width: 800px;  
+    height: 200px; 
+}
+h2{
+background-color: #b8f7bb;
+width: 600px;
+    height: 200px;
+}
+p{background-color: #66c5fc;
+width: 800px;height: 100px;}
+a{
+    background-color: #e49094;
+    display: block;
+        width: 700px;
+        margin:0 auto ;
+    line-height: 100px;
+    text-align: center;
+    font-size: 24px;
+
+    }

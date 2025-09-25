@@ -1,0 +1,31 @@
+ul{
+	padding-left:0;
+margin-top: 20px;}
+li{
+	list-style-type:none;
+	float: left;
+}
+
+li a{
+	display: block;
+	width: 200px;
+	height: 50px;
+	background-color:#690;
+	text-align:center;
+	color:#FFF;
+	text-decoration:none;
+	line-height:50px;
+	margin-bottom:10px;
+}
+
+li a:hover{
+	background-color:#06C;
+	color:#FF6;	}
+
+p{
+	background-color: #d3cbb9;
+	padding: 20px;
+}
+
+/*=== 清除浮動 ===*/
+.PP{}

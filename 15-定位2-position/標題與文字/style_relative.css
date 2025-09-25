@@ -1,0 +1,26 @@
+body{
+    width: 100%;
+}
+.header {
+    background-image: url(./banner.jpg);
+    width: 1200px;
+    max-width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    position: relative;
+    top: 22%;
+    left: 67%;
+    width: 350px;
+}
+
+p {
+    width: 350px;
+    position: relative;
+    top: 22%;
+    left: 67%;
+}

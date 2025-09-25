@@ -1,0 +1,20 @@
+.header {
+    background-image: url(./banner.jpg);
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    top: 20%;
+    left: 67%;
+    width: 350px;
+}
+p {
+    width: 350px;
+    position: absolute;
+    top: 35%;
+    left: 67%;
+}

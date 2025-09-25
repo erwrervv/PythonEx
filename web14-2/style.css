@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #fcdddd;
+}
+.header_content{
+    background-color: #fff;
+    background-image: url(./banner.jpg);
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+    padding-top:100px;
+    box-sizing: border-box;
+    padding-left:800px;
+    padding-right: 50px;
+}
+
+.header_content h1{
+
+    margin-bottom: 8px;
+    text-align: center;
+    
+}
+.header_content p{
+
+}

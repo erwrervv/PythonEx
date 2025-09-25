@@ -1,0 +1,42 @@
+/* a標籤的設定要按照:link :visited :hover :active 否則相同的設定比如color會被覆蓋 #a:link {}
+
+可以用 a {}
+
+代替 通常只設定 a {}
+
+、a:hover {}
+
+擬態模擬器可以適用任何標籤 比如 p:hover {} 、div:hover {}*/
+
+body {
+    font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+}
+p:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+.bgcr{
+    background-color: red;
+}
+.bgcb{
+    background-color: blue;
+}
+.p50{
+    padding: 50px;
+}
+a:link{
+    
+    color: pink;
+    text-decoration: none;
+
+}
+/* a:visited{
+    color: red;
+} */
+a:hover{
+    color:green;
+    text-decoration:solid;
+}
+/* a:active{
+    color:yellow;
+} */
